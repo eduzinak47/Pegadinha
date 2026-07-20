@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Áudio</title>
+
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+#botao {
+    width: 100vw;
+    height: 100vh;
+    border: none;
+    background: #111;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<button id="botao">
+▶ TOQUE AQUI
+</button>
+
+<audio id="audio" src="ai-cachorro-estourado.mp3"></audio>
+
+<script>
+const botao = document.getElementById("botao");
+const audio = document.getElementById("audio");
+
+botao.addEventListener("click", () => {
+    audio.play();
+    botao.innerHTML = "🔊 TOCANDO PANCADÃO...";
+});
+</script>
+
+</body>
+</html>
